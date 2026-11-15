@@ -176,7 +176,7 @@ function Hero() {
       <div className="text-center mb-10 mt-8">
         <h1 className="text-[#f7c948] leading-none mb-4 glow-pulse"
           style={{ fontSize: 'clamp(1.5rem, 6vw, 4rem)', fontFamily: 'Press Start 2P', letterSpacing: '0.05em' }}>
-          坦克大战
+          经典坦克大战
         </h1>
         <p className="text-[#e8e8e8] text-xs mt-3" style={{ letterSpacing: '0.2em' }}>BATTLE CITY 1985</p>
       </div>
@@ -203,7 +203,7 @@ function Hero() {
       <div className="absolute bottom-12 left-0 right-0 overflow-hidden border-t border-b border-[#333] py-2">
         <p className="whitespace-nowrap text-[#4cde4c] text-xs"
           style={{ animation: 'marquee 18s linear infinite', letterSpacing: '0.2em' }}>
-          ★ 坦克大战 ★ 经典300合1游戏 ★ 1985年 ★ 保卫基地 消灭敌人 ★ 一号机 二号机 双人合作 ★ 第01关 ★ 奖励关卡 ★ 共消灭20辆坦克 ★
+          ★ 经典坦克大战 ★ 经典300合1游戏 ★ 1985年 ★ 保卫基地 消灭敌人 ★ 一号机 二号机 双人合作 ★ 第01关 ★ 奖励关卡 ★ 共消灭20辆坦克 ★
         </p>
       </div>
 
@@ -557,7 +557,7 @@ function Footer() {
           <Eagle />
           <PlayerTank size={32} color="#4cde4c" dir="right" />
         </div>
-        <p className="text-[#f7c948] text-xs" style={{ letterSpacing: '0.1em' }}>坦克大战 BATTLE CITY</p>
+        <p className="text-[#f7c948] text-xs" style={{ letterSpacing: '0.1em' }}>经典坦克大战</p>
         <div className="flex justify-center gap-8 flex-wrap">
           {['坦克图鉴', '道具大全', '操作指南', '地形大全', '排行榜'].map(l => (
             <a key={l} href="#" className="text-[#444] hover:text-[#f7c948] transition-colors" style={{ fontSize: '8px', letterSpacing: '0.1em' }}>{l}</a>
@@ -593,7 +593,7 @@ function Nav() {
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-10">
         <a href="#" className="flex items-center gap-2">
           <PlayerTank size={20} />
-          <span className="text-[#f7c948]" style={{ fontSize: '8px', letterSpacing: '0.1em' }}>坦克大战</span>
+          <span className="text-[#f7c948]" style={{ fontSize: '8px', letterSpacing: '0.1em' }}>经典坦克大战</span>
         </a>
         <div className="hidden md:flex items-center gap-6">
           {NAV_ITEMS.map(([h, l]) => (
@@ -618,6 +618,10 @@ function Nav() {
 // ─── App ─────────────────────────────────────────────────────────────────────
 
 export default function App() {
+  useEffect(() => {
+    document.title = '经典坦克大战'
+  }, [])
+
   return (
     <div className="min-h-screen bg-[#000]" style={{ paddingTop: '40px' }}>
       <Nav />
